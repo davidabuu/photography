@@ -11,7 +11,7 @@ const About: React.FC = () => {
           </div>
           <div className="md:w-1/2">
             <p>
-              Welcome to the business space of Studio L'Amour Abuja. We are a
+              Welcome to the business space of Studio L&apos;Amour Abuja. We are a
               digital multimedia production company with core interest in
               Photography, videography, digital design, and print, event
               planning, and management. Also, our parent company Multimatics Nig

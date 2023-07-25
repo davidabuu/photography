@@ -8,7 +8,7 @@ import AOS from "aos"; // Import the AOS libra
 import ServicesPage from "./components/ServicePage";
 import Footer from "./components/Footer";
 import About from "./components/About";
-const page = () => {
+const Page = () => {
   useEffect(() => {
     AOS.init();
   }, []);
@@ -29,4 +29,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
