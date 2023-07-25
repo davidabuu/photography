@@ -1,35 +1,78 @@
-import React from 'react'
-import '@coreui/coreui/dist/css/coreui.min.css'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import { CCarousel, CCarouselItem, CImage, CCarouselCaption } from '@coreui/react'
-const Navbar = () => {
-  return (
-    <div>
-      <CCarousel controls indicators>
-  <CCarouselItem>
-    <CImage className="w-100 h-[100vh]" src='/for.jpg' alt="slide 1" />
-    <CCarouselCaption className="d-none text-blue-500 d-md-block">
-      <h5 className=' text-blue-500'>First slide label</h5>
-      <p className=' text-blue-500'>Some representative placeholder content for the first slide.</p>
-    </CCarouselCaption>
-  </CCarouselItem>
-  <CCarouselItem>
-    <CImage className="h-[100vh] w-100"  src='/pic2.jpg' alt="slide 2" />
-    <CCarouselCaption className="d-none d-md-block">
-      <h5>Second slide label</h5>
-      <p>Some representative placeholder content for the first slide.</p>
-    </CCarouselCaption>
-  </CCarouselItem>
-  <CCarouselItem>
-    <CImage className="h-[100vh] w-100" src='/pic3.webp'  alt="slide 3" />
-    <CCarouselCaption className="flex">
-      <h5>Third slide label</h5>
-      <p>Some representative placeholder content for the first slide.</p>
-    </CCarouselCaption>
-  </CCarouselItem>
-</CCarousel>
-    </div>
-  )
-}
+"use client";
+import { MenuOutlined } from "@ant-design/icons";
+import React, { useState } from "react";
 
-export default Navbar
+const Navbar = () => {
+  const [nav, setNav] = useState<boolean>(false);
+
+  const showNav = () => {
+    setNav(!nav);
+  };
+
+  return (
+    <div className="fixed top-0 left-0 text-white right-0 bg-[#2e2e37] bg-opacity-80 border-b-2 border-gray-400 p-3 z-50">
+      <div className="flex items-center justify-between">
+        <h1 className="font-bold text-white text-2xl md:text-3xl">
+          Multimatics Nig Ltd
+        </h1>
+        {/* Hamburger Menu Icon */}
+        <div className="md:hidden">
+          <MenuOutlined
+            className="text-white cursor-pointer"
+            onClick={showNav}
+          />
+        </div>
+        {/* Desktop Menu */}
+        <ul className="hidden nav-list md:flex space-x-4">
+          <li>
+            <a href="#home">HOME</a>
+          </li>
+          <li>
+            <a href="#about">ABOUT</a>
+          </li>
+
+          <li>
+            <a href="#services">SERVICES</a>
+          </li>
+          <li>
+            <a href="#contacts">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+      {/* Mobile Menu */}
+      <ul
+        className={`${
+          nav ? "flex flex-col" : "hidden"
+        } md:hidden absolute nav-list top-full left-0 px-0 right-0 bg-[#202036] bg-opacity-70 py-2`}
+      >
+        <li className="p-2 mx-0 text-white border-b-[1px]">Home</li>
+        <li className="p-2 text-white border-b-[1px]">
+          <a
+            onClick={showNav}
+            href="#services"
+          >
+            SERVICES
+          </a>
+        </li>
+        <li className="p-2 text-white border-b-[1px]">
+          <a
+            onClick={showNav}
+            href="#about"
+          >
+            ABOUT
+          </a>
+        </li>
+        <li className="p-2 text-white border-b-[1px]">
+          <a
+            onClick={showNav}
+            href="#contacts"
+          >
+            CONTACT
+          </a>
+        </li>
+      </ul>
+    </div>
+  );
+};
+
+export default Navbar;

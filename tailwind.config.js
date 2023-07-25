@@ -11,6 +11,10 @@ module.exports = {
       fontFamily: {
         sans: ["Montserrat Light", "Helvetica", "Arial", "sans-serif"],
       },
+      boxShadow: {
+        'custom': '2px 2px 4px rgba(0, 0, 0, 0.3)',
+        // Add more custom box shadow variants as needed
+      },
     },
   },
   plugins: [require('flowbite/plugin')],
