@@ -83,3 +83,10 @@ ul li {
 .fade-in.active {
   opacity: 1;
 }
+
+@media(max-width:900px){
+  #fold{
+    height: 700vh !important;
+    color: red !important;
+  }
+}

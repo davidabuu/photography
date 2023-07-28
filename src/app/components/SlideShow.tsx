@@ -16,7 +16,7 @@ const SlideShow = () => {
       >
         <CCarouselItem className="black-overlay flex items-center justify-center">
           <CImage
-            className="w-100 h-[50vh] md:h-[100vh] black-overlay"
+            className="w-100  h-[50vh] fold sm:h-[80vh] lg:h-[100vh] md:h-[80vh] black-overlay"
             src="/for.jpg"
             alt="slide 3"
           />
@@ -28,7 +28,7 @@ const SlideShow = () => {
         </CCarouselItem>
         <CCarouselItem className="black-overlay flex items-center justify-center">
           <CImage
-            className="w-100 h-[50vh] object-cover md:h-[100vh] black-overlay"
+            className="w-100  h-[50vh] fold sm:h-[80vh] lg:h-[100vh]   object-cover md:h-[80vh] black-overlay"
             src="/pic2.jpg"
             alt="slide 2"
           />
@@ -41,7 +41,8 @@ const SlideShow = () => {
         </CCarouselItem>
         <CCarouselItem className="black-overlay flex items-center justify-center">
           <CImage
-            className="w-100 h-[50vh] md:h-[100vh] black-overlay"
+          
+            className="w-100 h-[50vh] sm:h-[80vh] lg:h-[100vh] md:h-[80vh] black-overlay"
             src="/pic3.webp"
             alt="slide 3"
           />
