@@ -5,7 +5,7 @@ import { Inter, Montserrat } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 const open = Montserrat({ subsets: ["latin"] });
 export const metadata: Metadata = {
-  title: "Home||Mulitmedia Ltd",
+  title: "Home |  Multimedia Ltd",
   description:
     " We are a digital multimedia production company with core interest in Photography, videography, digital design and print, event planning and management",
 };

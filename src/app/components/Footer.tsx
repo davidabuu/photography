@@ -2,7 +2,7 @@
 
 const Footer: React.FC = () => {
   return (
-    <footer id="contacts" className="bg-[#2e2e37]  text-white py-4 text-center">
+    <footer id="contacts" className="bg-[#2e2e37] mt-4  text-white py-4 text-center">
       <div className="container mx-auto">
         <p className="mb-2">Multimatics Nig</p>
         <p className="mb-2">
